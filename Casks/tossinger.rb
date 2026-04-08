@@ -1,8 +1,8 @@
 cask "tossinger" do
-  version "1.0.16"
-  sha256 "c86ae15b19d109377edb1a8d367e0cfb56a721ed925c8d86ae931d87a4f97d8b"
+  version "1.0.17"
+  sha256 "70eb8fb1c766cfd7d1380c2dd0046b0dc5532d3d2cbce2e12e7943b1baeb33c8"
 
-  url "https://github.com/pseudobun/tossinger/releases/download/v1.0.16/Tossinger-1.0.16-macos.zip"
+  url "https://github.com/pseudobun/tossinger/releases/download/v1.0.17/Tossinger-1.0.17-macos.zip"
   name "Tossinger"
   desc "Save links and selected text for later"
   homepage "https://github.com/pseudobun/tossinger"
