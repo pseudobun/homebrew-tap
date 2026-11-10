@@ -1,6 +1,6 @@
 cask "paw" do
-  version "0.1.0-beta.4"
-  sha256 "3411145527b1a99514cbc84c04c3a6044e18616eb2899cd66157ccb97091aab4"
+  version "0.1.0-beta.5"
+  sha256 "f6e9e6c285a4525330297d921ab2229e0dbd0acc35d582202d309087d888c7da"
 
   url "https://github.com/pseudobun/paw/releases/download/v#{version}/paw-#{version}-macos.zip"
   name "paw"
@@ -8,6 +8,8 @@ cask "paw" do
   homepage "https://github.com/pseudobun/paw"
 
   depends_on macos: :sonoma
+
+  auto_updates true
 
   app "paw.app"
   binary "#{appdir}/paw.app/Contents/MacOS/paw"
