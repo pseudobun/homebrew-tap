@@ -1,6 +1,6 @@
 cask "hop" do
-  version "0.1.0-beta.1"
-  sha256 "e47b3005bb98a97b680ca87884a43973cc02a2e4ca8633f6c5ae9926dcc69eba"
+  version "0.1.0-beta.2"
+  sha256 "09336eeccdb1a4591454862a5f82359c96dc4aa91fa24abc12c04e63bbd6e4a5"
 
   url "https://github.com/pseudobun/hop/releases/download/v#{version}/hop-#{version}-macos.zip"
   name "hop"
@@ -9,6 +9,8 @@ cask "hop" do
 
   depends_on macos: ">= :tahoe"
   depends_on arch: :arm64
+
+  auto_updates true
 
   app "hop.app"
   binary "#{appdir}/hop.app/Contents/MacOS/hop"
