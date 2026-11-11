@@ -1,6 +1,6 @@
 cask "paw" do
-  version "0.1.0-beta.12"
-  sha256 "6fd26bddb4a187de8edcd9d149884389deed3f35d48d788f4af0498daf2edd43"
+  version "0.1.0-beta.13"
+  sha256 "e4befe081965ace293b35e812b03d487f1d28303f1d4dd42cc86f05b649df3c0"
 
   url "https://github.com/pseudobun/paw/releases/download/v#{version}/paw-#{version}-macos.zip"
   name "paw"
@@ -15,7 +15,11 @@ cask "paw" do
   binary "#{appdir}/paw.app/Contents/MacOS/paw"
 
   uninstall quit:      "com.pseudobun.paw",
-            launchctl: "com.pseudobun.paw"
+            launchctl: ["com.pseudobun.paw", "com.pseudobun.paw.dock"],
+            delete:    [
+              "/Library/LaunchDaemons/com.pseudobun.paw.dock.plist",
+              "/Library/Application Support/paw",
+            ]
 
   zap trash: [
     "~/.config/paw",
