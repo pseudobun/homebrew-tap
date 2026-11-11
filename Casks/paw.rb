@@ -1,6 +1,6 @@
 cask "paw" do
-  version "0.1.0-beta.13"
-  sha256 "e4befe081965ace293b35e812b03d487f1d28303f1d4dd42cc86f05b649df3c0"
+  version "0.1.0-beta.14"
+  sha256 "fe401a635410a408fada6253199dd1e9d7e0cb940b877673f71ffd79de952ef4"
 
   url "https://github.com/pseudobun/paw/releases/download/v#{version}/paw-#{version}-macos.zip"
   name "paw"
@@ -13,6 +13,18 @@ cask "paw" do
 
   app "paw.app"
   binary "#{appdir}/paw.app/Contents/MacOS/paw"
+
+  # The Dock helper (`sudo paw dock install`), when installed and changed in this version:
+  # install the new one (asks for the password; it restarts Dock).
+  postflight do
+    helper = "/Library/Application Support/paw/VERSION"
+    bundled = "#{appdir}/paw.app/Contents/Resources/dock/VERSION"
+    if File.exist?("/Library/LaunchDaemons/com.pseudobun.paw.dock.plist") && File.exist?(bundled) &&
+       (!File.exist?(helper) || File.read(helper).strip != File.read(bundled).strip)
+      ohai "paw's Dock helper changed: installing the new one"
+      system_command "#{appdir}/paw.app/Contents/MacOS/paw", args: ["dock", "install"], sudo: true
+    end
+  end
 
   uninstall quit:      "com.pseudobun.paw",
             launchctl: ["com.pseudobun.paw", "com.pseudobun.paw.dock"],
