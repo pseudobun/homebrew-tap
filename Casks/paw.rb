@@ -1,6 +1,6 @@
 cask "paw" do
-  version "0.1.0-beta.14"
-  sha256 "fe401a635410a408fada6253199dd1e9d7e0cb940b877673f71ffd79de952ef4"
+  version "0.1.0-beta.15"
+  sha256 "6c9ba0abb2924db7916a502ad222e7ec010978b0f9cce289d0da8957255518ed"
 
   url "https://github.com/pseudobun/paw/releases/download/v#{version}/paw-#{version}-macos.zip"
   name "paw"
@@ -15,8 +15,8 @@ cask "paw" do
   binary "#{appdir}/paw.app/Contents/MacOS/paw"
 
   # Homebrew runs these on every upgrade too: the Dock helper (`sudo paw dock install`) stays
-  # out of them, or each upgrade would remove it and ask for a password. paw installs a changed
-  # helper itself after an update; `sudo paw dock uninstall` removes it, and so does --zap.
+  # out of them, or each upgrade would remove it and ask for a password. paw says when an update
+  # changed it; `sudo paw dock uninstall` removes it, and so does --zap.
   uninstall quit:      "com.pseudobun.paw",
             launchctl: "com.pseudobun.paw"
 
