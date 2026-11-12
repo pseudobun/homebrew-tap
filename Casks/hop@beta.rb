@@ -1,6 +1,6 @@
 cask "hop@beta" do
-  version "0.1.0-beta.8"
-  sha256 "5f2204233c098f92b0c6f91070ae6b2f013ce0372ec938eea2ecb77b0ea7325e"
+  version "0.1.0-beta.9"
+  sha256 "54e2ef98fda7b638446b1f07397323b621b93f5c645ef147862e3c986a47571b"
 
   url "https://github.com/pseudobun/hop/releases/download/v#{version}/hop-#{version}-macos.zip"
   name "hop"
@@ -8,7 +8,7 @@ cask "hop@beta" do
   homepage "https://github.com/pseudobun/hop"
 
   conflicts_with cask: "hop"
-  depends_on macos: :tahoe
+  depends_on macos: ">= :tahoe"
   depends_on arch: :arm64
 
   auto_updates true
