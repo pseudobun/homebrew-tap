@@ -1,6 +1,6 @@
 cask "hop@beta" do
-  version "0.1.0-beta.10"
-  sha256 "e5013fb663f22a2ab48ebab051c784887c41ab254a2475582d20b36db0332f10"
+  version "0.1.0-beta.11"
+  sha256 "62499032380bb71e7c5a4b3c4b4ca364ac342d351724ed234504817274896efc"
 
   url "https://github.com/pseudobun/hop/releases/download/v#{version}/hop-#{version}-macos.zip"
   name "hop"
