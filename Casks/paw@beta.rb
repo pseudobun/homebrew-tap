@@ -7,7 +7,7 @@ cask "paw@beta" do
   desc "Tiling window manager with virtual workspaces, presets and stack indicators"
   homepage "https://github.com/pseudobun/paw"
 
-  conflicts_with cask: "paw"
+  conflicts_with cask: "pseudobun/tap/paw"
   depends_on macos: :sonoma
 
   auto_updates true

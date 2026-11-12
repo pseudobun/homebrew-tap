@@ -7,7 +7,7 @@ cask "tip@beta" do
   desc "Native, event-driven menu bar replacement with islands, themes and plugins"
   homepage "https://github.com/pseudobun/tip"
 
-  conflicts_with cask: "tip"
+  conflicts_with cask: "pseudobun/tap/tip"
   depends_on macos: :tahoe
   depends_on arch: :arm64
 
