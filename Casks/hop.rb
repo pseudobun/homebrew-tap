@@ -7,7 +7,7 @@ cask "hop" do
   desc "Tiny native launcher with calculator, clipboard history, snippets and notes"
   homepage "https://github.com/pseudobun/hop"
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
   depends_on arch: :arm64
 
   auto_updates true

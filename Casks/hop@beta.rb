@@ -8,7 +8,7 @@ cask "hop@beta" do
   homepage "https://github.com/pseudobun/hop"
 
   conflicts_with cask: "hop"
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
   depends_on arch: :arm64
 
   auto_updates true
