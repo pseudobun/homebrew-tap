@@ -1,6 +1,6 @@
 cask "paw@beta" do
-  version "0.1.0-beta.24"
-  sha256 "d8bfe497d427c74acec266060bfc522d9d0cd6a2bf0ad1c9f0832fc5a1e2d115"
+  version "0.1.0-beta.25"
+  sha256 "53ca078170ff50666ca3020e7032ac5ddaa8ad8768938bbb2736142a5e3def48"
 
   url "https://github.com/pseudobun/paw/releases/download/v#{version}/paw-#{version}-macos.zip"
   name "paw"
