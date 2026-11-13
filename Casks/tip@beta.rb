@@ -1,6 +1,6 @@
 cask "tip@beta" do
-  version "0.1.0-beta.5"
-  sha256 "d00bda754197470523018d475fccbe14ffba123993a5fec74e916f007909732a"
+  version "0.1.0-beta.6"
+  sha256 "ee4c3842073e4c2e7c3f524019af46be7173a95657ef55d5ddd4c97872e868d6"
 
   url "https://github.com/pseudobun/tip/releases/download/v#{version}/tip-#{version}-macos.zip"
   name "tip"
